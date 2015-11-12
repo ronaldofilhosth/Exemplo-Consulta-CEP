@@ -1,0 +1,58 @@
+<html   ng-app="app">
+  <head>
+    <meta charset="utf-8">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+</head>	
+    <title> Consulta CEP - API Gratuíta </title>
+    <body>
+    	<div class="container" ng-controller="consultaCepController" ng-init="cep=63010335">
+    		<div class="row">
+    		<h1>Consulta endereço - API Gratuíta - com AngularJS</h1>
+
+				<div  class="nav nav-bar">
+    				<label>CEP</label>
+    				<br/>
+    				<input type="text" ui-mask="99999-999" ng-model="cep" ></input>
+    			</div>
+
+    			<div  class="nav nav-bar">
+    				<label>Rua</label>
+    				<br/>
+    				<input type="text" ng-model="cepEn.logradouro" />
+    			</div>
+
+    			<div class="nav nav-bar">
+    				<label>Bairro</label>
+    				<br/>
+    				<input type="text" ng-model="cepEn.bairro" />
+    			</div>
+
+    			<div class="nav nav-bar">
+    				<label>Cidade</label>
+    				<br/>
+    				<input type="text" ng-model="cepEn.localidade" />
+    			</div>
+
+    			<div class="nav nav-bar">
+    				<label>UF</label>
+    				<br/>
+    				<input type="text" ng-model="cepEn.uf" />
+    			</div>
+
+    			<div class="nav nav-bar">
+    				<label>Cod. IBGE</label>
+    				<br/>
+    				<input type="text" ng-model="cepEn.ibge" />
+    			</div>
+    		</div>
+    		<button type="button" class="btn btn-primary" ng-click="buscarCep(cep)" >Buscar CEP</button>
+    	</div>	
+	</body>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="mask.min.js"></script>
+</html>	
+	
